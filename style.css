@@ -1,238 +1,109 @@
-/* CSS Reset*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:ital,wght@1,300&display=swap');
+
+body{
+
+    background-color: antiquewhite;
+}
 *{
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    font-family: 'Inter','Roboto';
 }
 
-/* CSS Variables*/
-:root{
-   --navbar-height:59px;
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+nav ul li{
+    padding: 0 12px;
+}
+.brand img{
+    width: 44px;
+    padding: 0 8px;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.container{
+    min-height: 68vh;
+    background-color: black;
+    color: white;
+    font-family: 'Inter','Roboto';
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 11px;
+    padding: 34px;
+    background-image: url('bg.jpg');
+}
+.bottom{
+   position: sticky;
+   height: 140px;
+   background-color:black ;
+   color: white;
+   bottom: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
 }
 
-/*Navigation bar*/
-#navbar{
-  display: flex;
-  align-items: center;
-  background-color:rgba(0,0, 0, 0, 0.5);
-  color: black;
-  position: absolute;
-  top: 0px;
+.icons{
+    margin-top: 14px;
 }
-#navbar::before{
-  content:"";
-  background-color: black;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  opacity: 0.7;
+.icons i{
+    cursor: pointer;
+}
+#myprogressBar{
+   width: 75vw;
+   cursor: pointer;
 }
 
-/* Navigation Bar: Logo and image*/
-
-
-#logo img{
-  height: 46px;
-  border-radius: 50%;
-
+.songItem{
+    height: 40px;
+    display: flex;
+    background-color: white;
+    width: 145%;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 44px;
+    
+}  
+.songItemContainer{
+    margin-top: 74px;
 }
 
-#logo{
-  padding: 15px 15px 15px 15px;
-  padding-left: 1.3rem;
-  padding-right: 1.3rem;
+.songItem img{
+   width: 43px;
+   margin: 0 21px;
+   border-radius: 10px;
 
 }
-/* Navigation Bar:List Styling*/
-#navbar ul {
-  display: flex;
+.timestamp{
+    margin: 0 23px;
     
 }
 
-#navbar ul li{
-    /* color:white;*/
-  list-style: none;
-  font-size: 1.3rem;
-  padding-right: 1.2rem;
- 
-  
+.timestamp i{
+    cursor: pointer;
 }
-
-.item{
-  text-decoration: none;
-  
-  color: rgb(255, 255, 255);
+.songinfo{
+    position: absolute;
+    left: 10vw;
 }
-
-
-.item:hover{
-
-  color:rgb(19, 2, 2);
+.songinfo img{
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
 }
-
-/*Home section*/ 
-#home{
-  display:flex;
-  flex-direction: column;
-  padding: 3px 200px;
-  height: 570px;
-  justify-content: center;
-  align-items: center;
-  
-}
-#home::before{
-  content: "";
-  position: absolute;
-  background: url('../img/bg.jpg') no-repeat center/cover;
-  height: 600px;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  z-index: -1;
-  opacity: 0.89;
-  
-}
-#home h1{
-  color: rgb(217, 227, 235);
-  text-align: center;
-  font-size: 1.5 ;
-}
-
-#home p{
-  color: rgb(222, 216, 216);
-  text-align: center;
-  font-size: 1.5rem;
-  font-family: 'Lobster', cursive;
-}
-/*Services Section*/
-#services{
-  margin: 34px;
-  display: flex;
-  z-index: -1;
-  font-family: 'Lobster', cursive;
-  padding: 5px;
-}
-#services .box{
-  border: 2px solid brown;
-  text-align: center;
-  padding: 20px;
-  margin: 25px 6px;
-  border-radius: 30px;
-  background: color #f2f2f2;
-  margin-bottom: 20px;
-  padding-top: 5px;
-  
-}
-#services.box img{
-  height: 160px;
-   margin: auto;
-  display: block;
-  background: url('../img/2.png.jpg') no-repeat center/cover;
-  border-radius: 50%;
-}
-#services.box p{
-  font-family: 'Lobster', cursive;
-  
-}
-/*Client Section*/
-#client-section{
-  font-family: 'Lobster', cursive;
-}
-
-#client-section::before{
-  content: "";
-  position: absolute;
-  background: url('../img/bg.jpg.jpg');
-  width: 100%;
-  height: 54%;
-  z-index: -1;
-  opacity: 0.6;
-}
-#clients{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.client-items{
-  padding: 50px;
-}
-#clients img{
-  height: 110px;
-  border-radius: 30%;
-  padding: 30px;
-  vertical-align: top;
-  
-}
-
-
-/*Contact Section*/
-#contact{
-  position: relative;
-  font-family: 'Lobster', cursive;
-}
-#contact::before{
-  content: "";
-  position: absolute;
-  width: 100%;
-  height:100%;
-  z-index: -1;
-  opacity: 0.7;
-  background: url('../img/contact.jpg') no-repeat center/cover;
-}
-#contact-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 40px;
-}
-#contact-box input,
-#contact-box textarea{
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 9px;
-  font-size: 1.1rem;
-}
-#contact-box form{
-  width: 40%;
-  font-family: 'Lobster', cursive;
-}
-
-#contact-box label{
-  font-size: 1.3rem;
-}
-footer{
-  background: black;
-  color: white;
-  padding: 9px 550px;
-}
-
-
-/* Utility classes*/
-.h-primary{
-   font-size:3.8rem;
-   padding: 12px;
-   text-align: center;
-   font-family: 'Lobster', cursive;
-   
-   
-}
-
-.h-secondary{
-  font-size: 2.8rem;
-  padding: 12px;
-}
-.btn{
-  padding:  6px 20px;
-  border: 2px solid;
-  background-color: whitesmoke;
-  color: rgb(4, 2, 2);
-  margin: 17px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  border-radius: 12px;
-  border-color: black;
-  
-}
- 
